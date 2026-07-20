@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "raw-viewer"
+version = "2.1.0"
+description = "Desktop viewer for tightly packed Bayer RAW8, RAW10 and RAW12 streams"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+dependencies = ["numpy>=1.24", "PySide6>=6.6"]
+
+[project.scripts]
+raw-viewer = "raw_viewer.app:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
